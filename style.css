@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  
+/*
+=============== 
+Variables
+===============
+*/
+
+    --clr-background: hsl(0, 0%, 97%, 100%);
+    --clr-text-dark-100: hsl(0, 0%, 13%, 100%);
+    --clr-text-dark-87: hsl(0, 0%, 13%, 87%);
+    --clr-text-dark-67: hsl(0, 0%, 13%,, 67%);
+    --clr-text-dark-35: hsl(0, 0%, 13%, 35%);
+    --clr-accent: hsl(187, 73%, 39%, 100%);
+
+  --transition: all 0.2s linear;
+  --spacing: 0.2rem;
+  --radius: 0.30rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+
+  
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+* {
+    font-size: 10px;
+    background-color: var(--clr-background);
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family:  'Roboto Mono', sans-serif;
+  line-height: 1.5;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+.btn {
+    padding-inline: 7rem;
+    padding-block: 1.3rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--clr-background);
+    background: var(--clr-text-dark-87);
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+.btn:hover{
+    scale: 0.95;
+}
+
+.container{
+    margin-inline: 4rem;
+}
+.header{
+ background-color: var(--clr-background);   
+}
+.title-section{
+    margin-block: 4rem;
+    margin-inline: auto;
+}
+
+.title-section .title{
+    margin-block-end: 2rem;
+    font-family: 'Roboto Mono';
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 116.38%;
+    text-transform: uppercase;
+    color: var(--clr-text-dark-87);
+}
+.title-section li{
+    font-family: 'Roboto Mono';
+    font-size: 2.4rem;
+    font-weight: 100;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: var(--clr-text-dark-87);
+}
+.title-section .description{
+    margin-block-start: 4rem;
+    width: fit-content;
+}
+
+.title-section .description h3, p{
+    font-size: 1.2rem;
+}
+.title-section .description h3{
+    color: var(--clr-text-dark-87);
+}
+.title-section .description p{
+    color: var(--clr-text-dark-67);
+}
+.title-section .description a{
+    display: none;
+}
+.title-section .description .description-button{
+width: fit-content;
+}
+
+.nav{
+    position: absolute;
+    right: 4rem;
+    bottom: 7vh;
+}
+.nav a{
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    color: var(--clr-text-dark-87);
+    transition: var(--transition);
+}
+.nav li{
+    width: 80px;
+    text-align: right;
+}
+.nav a:hover{
+    color: var(--clr-accent);
+}
+
+.petkor-image{
+    display: none;
+    z-index: -1;
+}
+
+@media screen and (min-width: 950px){
+    .petkor-image {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 8rem;
+        z-index: 0;
+        background-color: transparent;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .nav{
+        right: 8rem;
+        top: 4rem;
+        height: fit-content;
+        z-index: 999;
+    }
+    .nav ul{
+        display: flex;
+        gap: 4rem;
+    }
+    .title-section{
+        margin-block-start: 15vh;
+        margin-inline: 8rem;
+    }
+    .title-section ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .title-section .title{
+        font-size: 6.4rem;   
+    }
+    .title-section .description{
+        margin-block-start: 10rem;
+    }
+    .title-section .description a{
+        display: block;
+    }
+    .title-section .description h3{
+        font-size: 2rem;
+        color: var(--clr-text-dark-87);
+        margin-block-end: 1rem;
+    }
+    .title-section .description p{
+        margin-block-end: 5rem;
+        font-size: 1.6rem;
+        color: var(--clr-text-dark-67);
+        width: 450px;
+    }
+}
