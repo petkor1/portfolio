@@ -105,13 +105,12 @@ a {
     width: fit-content;
 }
 
-.title-section .description h3, p{
-    font-size: 1.2rem;
-}
 .title-section .description h3{
+    font-size: 1.6rem;
     color: var(--clr-text-dark-87);
 }
 .title-section .description p{
+    font-size: 1.2rem;
     color: var(--clr-text-dark-67);
 }
 .title-section .description a{
@@ -144,18 +143,23 @@ width: fit-content;
 }
 
 .petkor-image{
-    display: none;
-    z-index: -1;
+    height: 400px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 8rem;
+    z-index: 0;
+    background-color: transparent;
+}
+@media screen and (min-width: 1400px){
+    .petkor-image {
+        height:auto;
+    }
 }
 
-@media screen and (min-width: 950px){
+@media screen and (max-width: 900px){
     .petkor-image {
-        display: block;
-        position: absolute;
-        bottom: 0;
-        right: 8rem;
-        z-index: 0;
-        background-color: transparent;
+        display: none;
     }
 }
 
@@ -199,4 +203,5 @@ width: fit-content;
         color: var(--clr-text-dark-67);
         width: 450px;
     }
+    
 }
