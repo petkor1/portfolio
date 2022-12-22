@@ -95,7 +95,7 @@ a {
 }
 .title-section li{
     font-family: 'Roboto Mono';
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 100;
     line-height: 130%;
     text-transform: uppercase;
@@ -113,6 +113,7 @@ a {
     color: var(--clr-text-dark-87);
 }
 .title-section .description p{
+    margin-block-start: 1rem;
     font-size: 1.2rem;
     color: var(--clr-text-dark-67);
 }
@@ -179,6 +180,9 @@ width: -webkit-fit-content;
         display: flex;
         flex-wrap: wrap;
         gap: 2rem;
+    }
+    .title-section li{
+        font-size: 2.4rem;
     }
     .title-section .title{
         font-size: 6.4rem;   
