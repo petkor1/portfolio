@@ -12,7 +12,7 @@ Variables
     --clr-background: hsl(0, 0%, 97%, 100%);
     --clr-text-dark-100: hsl(0, 0%, 13%, 100%);
     --clr-text-dark-87: hsl(0, 0%, 13%, 87%);
-    --clr-text-dark-67: hsl(0, 0%, 13%,, 67%);
+    --clr-text-dark-67: hsl(0, 0%, 13%, 67%);
     --clr-text-dark-35: hsl(0, 0%, 13%, 35%);
     --clr-accent: hsl(187, 73%, 39%, 100%);
 
@@ -91,6 +91,7 @@ a {
     line-height: 116.38%;
     text-transform: uppercase;
     color: var(--clr-text-dark-87);
+
 }
 .title-section li{
     font-family: 'Roboto Mono';
@@ -103,6 +104,8 @@ a {
 .title-section .description{
     margin-block-start: 4rem;
     width: fit-content;
+    width: -moz-fit-content; 
+    width: -webkit-fit-content; 
 }
 
 .title-section .description h3{
@@ -118,6 +121,8 @@ a {
 }
 .title-section .description .description-button{
 width: fit-content;
+width: -moz-fit-content; 
+width: -webkit-fit-content; 
 }
 
 .nav{
@@ -151,23 +156,15 @@ width: fit-content;
     z-index: 0;
     background-color: transparent;
 }
-@media screen and (min-width: 1400px){
-    .petkor-image {
-        height:auto;
-    }
-}
 
-@media screen and (max-width: 900px){
-    .petkor-image {
-        display: none;
-    }
-}
 
 @media screen and (min-width: 800px) {
     .nav{
         right: 8rem;
         top: 4rem;
         height: fit-content;
+        height: -moz-fit-content; /* Firefox */
+        height: -webkit-fit-content; /* Safari */
         z-index: 999;
     }
     .nav ul{
@@ -204,4 +201,27 @@ width: fit-content;
         width: 450px;
     }
     
+}
+
+@media screen and (max-height: 550px){
+    .petkor-image {
+        display:none;
+    }
+}
+@media screen and (min-width: 1400px){
+    .petkor-image {
+        height:500px;
+    }
+}
+
+@media screen and (min-width: 1600px){
+    .petkor-image {
+        height:auto;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .petkor-image {
+        display: none;
+    }
 }
