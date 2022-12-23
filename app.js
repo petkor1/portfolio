@@ -10,7 +10,7 @@ document.addEventListener('mousemove', (event) => {
   const y = event.clientY;  
 
   const targetRotation = Math.atan2(-y + kask.offsetTop, -x + kask.offsetLeft) * 180 / Math.PI;  
-  const limitedRotation = Math.max(Math.min(targetRotation, 8), 0);  
+  const limitedRotation = Math.max(Math.min(targetRotation, 25), 0);  
   const rotationDiff = limitedRotation - currentRotation;  
   currentRotation += rotationDiff * 0.1;  
   kask.style.transform = `rotate(${currentRotation}deg)`;  
