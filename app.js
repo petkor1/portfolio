@@ -1,8 +1,10 @@
 const kask = document.querySelector('.kask-image'); 
+const menuLink = [...document.querySelectorAll('.menu-link')];
+const sound = document.getElementById('sound');
 let currentRotation = 0;  
 
 
-// rotacja kasku
+// rotacja kasku darth vadera
 document.addEventListener('mousemove', (event) => {  
   const x = event.clientX;  
   const y = event.clientY;  
@@ -14,3 +16,9 @@ document.addEventListener('mousemove', (event) => {
   kask.style.transform = `rotate(${currentRotation}deg)`;  
 });
 
+// efekt dźwiękowy po najechaniu na link z menu
+// menuLink.forEach(item => {
+//     item.addEventListener('mouseenter', function(){
+//         sound.play();
+//     })
+// })
