@@ -16,7 +16,7 @@ Variables
     --clr-text-dark-35: hsl(0, 0%, 13%, 35%);
     --clr-accent: hsl(192, 43%, 50%, 100%);
 
-  --transition: all 0.2s linear;
+  --transition: all 0.3s linear;
   --spacing: 0.2rem;
   --radius: 0.30rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -69,7 +69,8 @@ a {
     border: none;
 }
 .btn:hover{
-    scale: 0.95;
+    scale: 1.02;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.45);
 }
 
 /* strona glówna */
@@ -128,16 +129,18 @@ width: -moz-fit-content;
 width: -webkit-fit-content; 
 }
 
+/* desktop nav */
 .nav{
     position: absolute;
     right: 4rem;
     bottom: 7vh;
+    display: none;
 }
 .nav a{
     width: 100%;
     font-weight: 700;
     font-size: 1.6rem;
-    line-height: 3rem;
+    line-height: 4rem;
     text-transform: uppercase;
     color: var(--clr-text-dark-87);
     transition: var(--transition);
@@ -146,6 +149,56 @@ width: -webkit-fit-content;
     width: 80px;
     text-align: right;
 }
+
+/* mobile sidebar */
+
+.nav-sidebar{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    min-width: 50%;
+    height: 100%;
+    padding-inline: 4rem;
+    padding-block: 4rem;
+    gap:4rem;
+    transform: translate(100%);
+    box-shadow: none;
+    overflow: hidden;
+    z-index: 99;
+    transition: var(--transition);
+}
+.nav-sidebar.show-sidebar{
+    transform: translate(0);
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.249);    
+}
+
+.nav-sidebar .close-sidebar-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.nav-sidebar .close-sidebar-btn p{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--clr-text-dark-87);
+}
+.nav-sidebar a{
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+    color: var(--clr-text-dark-87);
+    transition: var(--transition);
+}
+.nav-sidebar li {
+    text-align: right;
+}
+
 
 .petkor-image{
     height: 400px;
@@ -163,6 +216,9 @@ width: -webkit-fit-content;
     right: 18rem;
     z-index: 0;
     background-color: transparent;
+}
+.active{
+    display: block;
 }
 
 
@@ -210,6 +266,9 @@ width: -webkit-fit-content;
     .nav li a:focus::after{
         opacity: 1;
         transform: translate(0);
+    }
+    .nav-sidebar.show-sidebar{
+        display: none;
     }
 
     .title-section{
